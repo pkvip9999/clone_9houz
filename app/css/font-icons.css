@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "font-icon";
+  src:url("../fonts/font-icon.eot");
+  src:url("../fonts/font-icon.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/font-icon.woff") format("woff"),
+    url("../fonts/font-icon.ttf") format("truetype"),
+    url("../fonts/font-icon.svg#font-icon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[data-icon]:before {
+  font-family: "font-icon" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "font-icon" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #ffffff;
+  margin-right: 5px;
+}
+
+.icon-search:before {
+  content: "\61";
+  color: #943c82;
+}
+.icon-user:before {
+  content: "\62";
+  color: #943c82;
+}
+.icon-menu:before {
+  content: "\63";
+  color: #943c82;
+}
+.icon-lightbulb-o:before {
+  content: "\64";
+}
+.icon-wrench:before {
+  content: "\65";
+}
+.icon-home:before {
+  content: "\66";
+}
+.icon-book-1:before {
+  content: "\67";
+}
+.icon-briefcase:before {
+  content: "\68";
+}
+.icon-users:before {
+  content: "\69";
+}
+.icon-rss-square:before {
+  content: "\6a";
+}
+.icon-pencil-square-o:before {
+  content: "\6b";
+}

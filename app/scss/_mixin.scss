@@ -1,0 +1,24 @@
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin fonts($font){
+  $url:"";
+  @if($font=='osR'){
+    $url:"../fonts/OpenSans-Regular.ttf";
+  }
+  @else if($font=='osI'){
+    $url:"../fonts/OpenSans-Italic.ttf";
+  }
+  @else if($font=='osL'){
+    $url:"../fonts/OpenSans-Light.ttf";
+  }
+  @else if($font=='osB'){
+    $url:"../fonts/OpenSans-Bold.ttf";
+  }
+  @font-face {
+    font-family: $font;
+    src: url($url);
+  }
+}

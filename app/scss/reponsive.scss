@@ -1,0 +1,134 @@
+@import "mixin";
+
+@media (min-width: 769px) {
+  // style header
+  .logo {
+    @include size(100px, auto);
+    margin-right: 160px;
+  }
+  .icon-menu {
+    display: none;
+  }
+  .search {
+    @include size(370px, 37px);
+    border: 1px solid #909090;
+    border-radius: 35px;
+    margin-right: auto;
+    text-align: center;
+    padding: 0 17px;
+
+    input {
+      @include size(100%)
+    }
+
+  }
+  //style menu top
+  #menu-top {
+    .menu {
+      height: 100%;
+      padding-left: 130px;
+    }
+
+    .home {
+      display: none !important;
+    }
+
+    ul, li {
+      height: 100%;
+    }
+
+    li {
+      float: left;
+      padding: 0 30px;
+      text-transform: capitalize;
+
+      &:hover {
+        background: #943c82;
+      }
+    }
+  }
+  //  style footer
+  .f-1 {
+    width: 50%;
+    padding-right: 160px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  // style header
+  body {
+    padding: 0 10px;
+    transform: translateX(70%);
+  }
+
+  .search {
+    input {
+      display: none;
+    }
+
+    .icon-search {
+      font-size: 30px;
+      display: flex;
+      align-items: center;
+    }
+  }
+  .container {
+    justify-content: space-between
+  }
+  //style menu top
+  #menu-top {
+    background: #f4f6f9;
+    position: fixed;
+    height: 100%;
+    width: 70%;
+    top: 0;
+    right: 100%;
+    z-index: 100;
+    [class*='icon-']::before, a {
+      color: #b953a4 !important;
+    }
+    li {
+       height: auto;
+      padding: 0 10px;
+     }
+    .menu {
+      padding: 12px 0;
+    }
+  }
+
+
+  .icon-menu {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+  }
+  .home {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+
+  //  style main
+  #main {
+
+  }
+  //  style footer
+  footer {
+    .container {
+      flex-direction: column;
+    }
+
+    .f-2 {
+      order: 1;
+      margin-bottom: 20px;
+    }
+
+    .f-1 {
+      order: 2;
+
+      .logo {
+        width: 30%;
+      }
+    }
+  }
+}
