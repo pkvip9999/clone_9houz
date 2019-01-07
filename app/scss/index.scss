@@ -27,6 +27,7 @@ body{
   font-family: 'osR';
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 a{
   text-decoration: none !important;
@@ -43,9 +44,9 @@ input:focus{
   outline: none;
 }
 img{
-   @include size(100%);
+  @include size(100%);
   object-fit: cover;
- }
+}
 ul{
   padding: 0;
   margin: 0;
@@ -89,13 +90,22 @@ header{
   }
 }
 
-
+.r270{
+  transform: rotate(-90deg);
+}
+.r90{
+  transform: rotate(90deg);
+}
 // style menu top
 #menu-top{
   @include size(100%,43px);
   background: #b953a4;
   a{
     color: #ffffff;
+    z-index: 10000;
+  }
+  .drop-menu{
+    height: 100%;
   }
 }
 
@@ -111,7 +121,6 @@ header{
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-
   .slider{
     @include size(600%,100%);
     position: absolute;
@@ -172,13 +181,14 @@ header{
   @include size(100%,auto);
   padding: 55px 0;
   .pros{
-    overflow: hidden;
+    overflow-x: hidden;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    width: 100%;
   }
   .pro{
     text-align: center;
@@ -272,32 +282,7 @@ header{
     .card-title{
       font-size: 15px;
     }
-    .block-with-text {
-      font-size: 13px;
-      font-family: 'osL';
-      overflow: hidden;
-      position: relative;
-      line-height: 20px;
-      max-height: 40px;
-      text-align: justify;
-      margin-right: -1em;
-      padding-right: 1em;
-    }
-    .block-with-text:before {
-      content: '...';
-      position: absolute;
-      right: 0;
-      bottom: 0;
-    }
-    .block-with-text:after {
-      content: '';
-      position: absolute;
-      right: 0;
-      width: 1em;
-      height: 1em;
-      margin-top: 0.2em;
-      background: white;
-    }
+
   }
   .media{
     border-top: 1px solid #dddddd;
@@ -322,6 +307,32 @@ header{
       color: #999;
     }
   }
+}
+.block-with-text {
+  font-size: 13px;
+  font-family: 'osL';
+  overflow: hidden;
+  position: relative;
+  line-height: 20px;
+  max-height: 40px;
+  text-align: justify;
+  margin-right: -1em;
+  padding-right: 1em;
+}
+.block-with-text:before {
+  content: '...';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.block-with-text:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 1em;
+  height: 1em;
+  margin-top: 0.2em;
+  background: white;
 }
 .title-2{
   font-size: 30px;

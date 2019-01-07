@@ -1,0 +1,267 @@
+@import "mixin";
+
+
+#main-da {
+  background: #f4f6f9;
+  padding: 20px 0 0 0;
+}
+
+.slidebar {
+  padding: 20px;
+  border: 1px solid #eee;
+  background: #ffffff;
+  color: #333333;
+  .list-options{
+    overflow: hidden;
+    transition: all 0.3s;
+  }
+  ul {
+    font-size: 13px;
+    font-family: 'osL';
+    margin-bottom: 10px;
+
+    a {
+      color: #333333;
+    }
+
+    a:hover {
+      color: #b953a4;
+    }
+  }
+
+  li {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  li + li {
+    margin-top: 10px;
+  }
+
+  .icon-angle-down {
+    width: 20px;
+  }
+}
+
+.title-slidebar {
+  font-family: 'osB';
+  font-size: 15px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  height: 30px;
+}
+
+.tab-slidebar {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+
+.main-content {
+  @extend .slidebar;
+  h1 {
+    font-size: 25px;
+  }
+
+  .media {
+    border-top: 1px solid #dddddd;
+    margin-top: 25px;
+    padding-top: 25px;
+
+    .img-project {
+      @include size(360px, 195px);
+      margin-right: 20px;
+      position: relative;
+      overflow: hidden;
+
+      img {
+        @include size(100%);
+      }
+
+      .img-act {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 20px 0;
+        background: rgba(0, 0, 0, 0.6);
+        color: #ffffff;
+        width: 100%;
+        font-size: 15px;
+        transform: translateY(100%);
+        transition: all 0.3s;
+
+        span {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      &:hover {
+        .img-act {
+          transform: translateY(0);
+        }
+      }
+    }
+
+    h2 {
+      font-size: 18px;
+      font-family: 'osR' !important;
+    }
+
+    .avt {
+      @include size(40px);
+      border-radius: 100%;
+      margin-right: 10px;
+
+      img {
+        border-radius: 100%;
+      }
+    }
+
+    h3 {
+      font-family: 'osB';
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+  }
+
+  .user {
+    margin-bottom: 10px;
+
+    span {
+      display: flex;
+      align-items: center;
+      font-size: 11px;
+      color: #999999;
+    }
+  }
+}
+
+.xt {
+  color: #b953a4 !important;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .slidebar{
+    margin-bottom: 10px;
+  }
+  .media {
+    flex-direction: column;
+  }
+  .img-project {
+    width: 100% !important;
+    height: auto !important;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+$hoverDuration: 170ms;
+$borderColor: rgba (185,83,164,0.1);
+
+
+.clear {
+  &:after,
+  &:before {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+.pagination__wrapper {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 17%, rgba(255, 255, 255, 1) 83%, rgba(255, 255, 255, 0) 100%);
+  margin: 20px 0;
+  height: 50px;
+}
+@keyframes hoverAnimation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.pagination {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @extend .clear;
+
+  li {
+    //border-left: 1px solid rgba(0,0,0,.2);
+    display: block;
+    float: left;
+
+    &:first-child {
+      border: none;
+    }
+  }
+
+  button,
+  span {
+    background: none;
+    border: none;
+    border-radius: 50%;
+    box-sizing: border-box;
+    color: rgba(185,83,164,0.8);
+    display: block;
+    font-size: 16px;
+    height: 40px;
+    line-height: 40px;
+    min-width: 40px;
+    padding: 0;
+  }
+
+  button {
+    outline: none;
+    position: relative;
+    transition: all 170ms linear;
+
+    &:before {
+      background: rgba(0, 0, 0, .2);
+      border-radius: 50%;
+      content: "";
+      cursor: pointer;
+      height: 0;
+      left: 50%;
+      opacity: 0;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      transition: all $hoverDuration linear;
+      top: 50%;
+      width: 0;
+    }
+
+    &:hover:not(.active) {
+      color: rgba(0, 0, 0, 1);
+
+      &:before {
+        animation: hoverAnimation ($hoverDuration * 3) linear forwards;
+        height: 40px;
+        width: 40px;
+      }
+    }
+
+    &.active {
+      background: rgba(0, 0, 0, .1);
+      color: rgba(0, 0, 0, 1);
+    }
+  }
+
+  .prev,
+  .next {
+    font-size: 14px;
+  }
+}

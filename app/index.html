@@ -18,8 +18,8 @@
         <div class="logo ">
             <img src="imgs/logo.png" alt="">
         </div>
-        <div class="search d-flex align-items-center">
-            <input class="h-100" type="text" placeholder="Tim kiem">
+        <div class=" search d-flex align-items-center">
+            <input type="text" placeholder="Tim kiem">
             <button type="submit">
                 <div class="icon-search"></div>
             </button>
@@ -33,30 +33,156 @@
     <div class="container">
         <div class="menu ">
             <ul class="list-unstyled">
-                <li class="home d-flex align-items-center icon-home">
-                    <a href="">Trang Chủ</a>
+                <li class="home d-flex align-items-center ">
+                    <a class="" href=""><img src="imgs/logo.png" alt=""></a>
                 </li>
-                <li class="d-flex align-items-center icon-lightbulb-o">
-                    <a href="#">Ý Tưởng</a>
-                </li>
-                <div class="">
-s
+                <div class="main-menu">
+                    <div class="drop-menu" >
+                        <li>
+                            <a class="icon-lightbulb-o" href="#">Ý Tưởng</a>
+                            <span class="icon-angle-down" data-toggle="dropdown"></span>
+                        </li>
+                        <div class="list-cate list show" >
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#"> Thiết kế nội thất nhà biệt thự </a>
+                                     <span class="icon-angle-down r270" onclick="dmenuChild(1)"></span>
+                                </li>
+                                <li>
+                                    <a href="#">Phòng ngủ</a>
+                                    <span class="icon-angle-down r270" onclick="dmenuChild(2)"></span>
+                                </li>
+                                <li><a href="#">Phòng khách</a></li>
+                                <li><a href="#">Phòng tắm</a></li>
+                                <li><a href="#">Phòng làm việc</a></li>
+                                <li><a href="#">Phòng bếp</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="drop-menu" >
+                        <li>
+                            <a class="icon-book-1" href="#">Sản Phẩm</a>
+                            <span class="icon-angle-down"></span>
+                        </li>
+                        <div class="list-cate list show">
+                            <ul class="list-unstyled">
+                                <li><a href="#">menu 1</a></li>
+                                <li><a href="#">menu 1</a></li>
+                                <li><a href="#">menu 1</a></li>
+                                <li><a href="#">menu 1</a></li>
+                                <li><a href="#">menu 1</a></li>
+                                <li><a href="#">menu 1</a></li>
+                                <li><a href="#">menu 1</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="">
+                        <li>
+                            <a class="icon-wrench" href="#">Dịch vụ</a>
+                        </li>
+                    </div>
+                    <div class="">
+                        <li>
+                            <a class="icon-briefcase" href="#">Dự Án</a>
+                        </li>
+                    </div>
+                    <div class="">
+                        <li>
+                            <a class="icon-users" href="#">Cộng Đồng</a>
+                        </li>
+                    </div>
+                    <div class="">
+                        <li>
+                            <a class="icon-rss-square" href="#">Tin Tức</a>
+                        </li>
+                    </div>
                 </div>
-                <li class="d-flex align-items-center icon-book-1">
-                    <a href="#">Sản Phẩm</a>
-                </li>
-                <li class="d-flex align-items-center icon-wrench">
-                    <a href="#">Dịch vụ</a>
-                </li>
-                <li class="d-flex align-items-center icon-briefcase">
-                    <a href="#">Dự Án</a>
-                </li>
-                <li class="d-flex align-items-center icon-users">
-                    <a href="#">Cộng Đồng</a>
-                </li>
-                <li class="d-flex align-items-center icon-rss-square">
-                    <a href="#">Tin Tức</a>
-                </li>
+                <div id="drop-menu-child-1">
+                    <ul>
+                        <li class="back">
+                            <a href="#">BACK M1</a>
+                            <span class="icon-angle-down r90   " onclick="back(0)"></span></li>
+                        <li>
+                            <a href="#">mẫu thiết kế nội thất biệt thự siêu sang trọng</a>
+                            <span class="icon-angle-down r270" onclick="dmenuChild('1a')"></span>
+                        </li>
+                        <li>
+                            <a href="#">menu</a>
+                            <span class="icon-angle-down r270   "></span>
+                        </li>
+                        <li>
+                            <a href="#">menu</a>
+                        </li>
+                        <li>
+                            <a href="#">menu</a>
+                        </li>
+
+
+                    </ul>
+                </div>
+                <div id="drop-menu-child-2">
+                    <ul>
+                        <li class="back">
+                            <a href="#">BACK M2</a>
+                            <span class="icon-angle-down r90   " onclick="back(0)"></span></li>
+                        <li>
+                            <a href="#">mẫu thiết kế nội thất biệt thự siêu sang trọng</a>
+                            <span class="icon-angle-down r270   "></span>
+                        </li>
+                        <li>
+                            <a href="#">menu</a>
+                            <span class="icon-angle-down r270   "></span>
+                        </li>
+                        <li>
+                            <a href="#">menu</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="drop-menu-child-1a">
+                    <ul>
+                        <li class="back">
+                            <a href="#">BACK M1A</a>
+                            <span class="icon-angle-down r90   " onclick="back(1)"></span></li>
+                        <li>
+                            <a href="#">mẫu thiết kế nội thất biệt thự siêu sang trọng</a>
+                            <span class="icon-angle-down r270   " onclick="dmenuChild('1aa')"></span>
+                        </li>
+                        <li>
+                            <a href="#">menu</a>
+                            <span class="icon-angle-down r270   "></span>
+                        </li>
+                        <li>
+                            <a href="#">menu</a>
+                        </li>
+                        <li>
+                            <a href="#">menu</a>
+                        </li>
+
+
+                    </ul>
+                </div>
+                <div id="drop-menu-child-1aa">
+                    <ul>
+                        <li class="back">
+                            <a href="#">BACK M1AA</a>
+                            <span class="icon-angle-down r90   " onclick="back('1a')"></span></li>
+                        <li>
+                            <a href="#">mẫu thiết kế nội thất biệt thự siêu sang trọng</a>
+                            <span class="icon-angle-down r270   "></span>
+                        </li>
+                        <li>
+                            <a href="#">menu</a>
+                        </li>
+                        <li>
+                            <a href="#">menu</a>
+                        </li>
+                        <li>
+                            <a href="#">menu</a>
+                        </li>
+
+
+                    </ul>
+                </div>
             </ul>
         </div>
     </div>
@@ -116,7 +242,7 @@ s
                 </p>
             </div>
         </div>
-        <div class="pros w-100 ">
+        <div class="pros ">
             <div class="pro">
                 <div class="avatar">
                     <img src="imgs/avt-1.png" alt="">
@@ -212,12 +338,14 @@ s
                     <p>Thiết kế biệt thự</p>
                 </div>
                 <div class="card">
-                    <div class="k-date"><p>15</p><p>T2</p></div>
+                    <div class="k-date"><p>15</p>
+                        <p>T2</p></div>
                     <img src="imgs/img-tab-1.png" class="card-img-top" alt="">
                     <div class="card-body">
                         <a href="#" class="card-title"><p>Biệt thự hiện đại chinh phục mọi ánh nhìn</p></a>
                         <div class="block-with-text">
-                            Mẫu biệt thự đẹp luôn là lựa chọn của nhiều gia đình mới biệt thự đẹp luôn là lựa chọn của nhiều gia đình mới
+                            Mẫu biệt thự đẹp luôn là lựa chọn của nhiều gia đình mới biệt thự đẹp luôn là lựa chọn của
+                            nhiều gia đình mới
                         </div>
                         <ul class="list-unstyled">
                             <a href="#">
@@ -228,6 +356,8 @@ s
                                         <p>20/3/2018</p>
                                     </div>
                                 </li>
+                            </a>
+                            <a href="#">
                                 <li class="media">
                                     <img src="imgs/img-1.png" alt="">
                                     <div class="media-body">
@@ -235,6 +365,8 @@ s
                                         <p>20/3/2018</p>
                                     </div>
                                 </li>
+                            </a>
+                            <a href="#">
                                 <li class="media">
                                     <img src="imgs/img-1.png" alt="">
                                     <div class="media-body">
@@ -252,12 +384,14 @@ s
                     <p>Thiết kế chung cư</p>
                 </div>
                 <div class="card">
-                    <div class="k-date"><p>15</p><p>T2</p></div>
+                    <div class="k-date"><p>15</p>
+                        <p>T2</p></div>
                     <img src="imgs/img-tab-2.png" class="card-img-top" alt="">
                     <div class="card-body">
                         <a href="#" class="card-title"><p>Biệt thự hiện đại chinh phục mọi ánh nhìn</p></a>
                         <div class="block-with-text">
-                            Mẫu biệt thự đẹp luôn là lựa chọn của nhiều gia đình mới biệt thự đẹp luôn là lựa chọn của nhiều gia đình mới
+                            Mẫu biệt thự đẹp luôn là lựa chọn của nhiều gia đình mới biệt thự đẹp luôn là lựa chọn của
+                            nhiều gia đình mới
                         </div>
                         <ul class="list-unstyled">
                             <a href="#">
@@ -268,6 +402,8 @@ s
                                         <p>20/3/2018</p>
                                     </div>
                                 </li>
+                            </a>
+                            <a href="#">
                                 <li class="media">
                                     <img src="imgs/img-1.png" alt="">
                                     <div class="media-body">
@@ -275,6 +411,8 @@ s
                                         <p>20/3/2018</p>
                                     </div>
                                 </li>
+                            </a>
+                            <a href="#">
                                 <li class="media">
                                     <img src="imgs/img-1.png" alt="">
                                     <div class="media-body">
@@ -292,12 +430,14 @@ s
                     <p>Thiết kế nhà phố</p>
                 </div>
                 <div class="card">
-                    <div class="k-date"><p>15</p><p>T2</p></div>
+                    <div class="k-date"><p>15</p>
+                        <p>T2</p></div>
                     <img src="imgs/img-tab-3.png" class="card-img-top" alt="">
                     <div class="card-body">
                         <a href="#" class="card-title"><p>Biệt thự hiện đại chinh phục mọi ánh nhìn</p></a>
                         <div class="block-with-text">
-                            Mẫu biệt thự đẹp luôn là lựa chọn của nhiều gia đình mới biệt thự đẹp luôn là lựa chọn của nhiều gia đình mới
+                            Mẫu biệt thự đẹp luôn là lựa chọn của nhiều gia đình mới biệt thự đẹp luôn là lựa chọn của
+                            nhiều gia đình mới
                         </div>
                         <ul class="list-unstyled">
                             <a href="#">
@@ -308,6 +448,8 @@ s
                                         <p>20/3/2018</p>
                                     </div>
                                 </li>
+                            </a>
+                            <a href="#">
                                 <li class="media">
                                     <img src="imgs/img-1.png" alt="">
                                     <div class="media-body">
@@ -315,6 +457,8 @@ s
                                         <p>20/3/2018</p>
                                     </div>
                                 </li>
+                            </a>
+                            <a href="#">
                                 <li class="media">
                                     <img src="imgs/img-1.png" alt="">
                                     <div class="media-body">
@@ -336,7 +480,7 @@ s
 <section id="slide-bot">
     <div class="container">
         <div class="prev">&#10094;</div>
-        <div style="overflow: hidden" >
+        <div style="overflow: hidden">
             <div class=" ideas ">
                 <div class="card idea">
                     <div class="card-img-top">
@@ -507,8 +651,10 @@ s
         </div>
     </div>
 </footer>
+<div class="mc"></div>
 <!--build:js js/main.min.js -->
 <script src="js/myjs.js"></script>
+<script src="js/index.js"></script>
 <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- endbuild -->
 </body>

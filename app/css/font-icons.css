@@ -1,18 +1,19 @@
 @charset "UTF-8";
 
 @font-face {
-  font-family: "font-icon";
-  src:url("../fonts/font-icon.eot");
-  src:url("../fonts/font-icon.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/font-icon.woff") format("woff"),
-    url("../fonts/font-icon.ttf") format("truetype"),
-    url("../fonts/font-icon.svg#font-icon") format("svg");
+  font-family: "untitled-font-6";
+  src:url("../fonts/untitled-font-6.eot");
+  src:url("../fonts/untitled-font-6.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/untitled-font-6.woff") format("woff"),
+    url("../fonts/untitled-font-6.ttf") format("truetype"),
+    url("../fonts/untitled-font-6.svg#untitled-font-6") format("svg");
   font-weight: normal;
   font-style: normal;
+
 }
 
 [data-icon]:before {
-  font-family: "font-icon" !important;
+  font-family: "untitled-font-6" !important;
   content: attr(data-icon);
   font-style: normal !important;
   font-weight: normal !important;
@@ -26,7 +27,7 @@
 
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
-  font-family: "font-icon" !important;
+  font-family: "untitled-font-6" !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;
@@ -35,43 +36,63 @@
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #ffffff;
   margin-right: 5px;
+  cursor: pointer;
+  color: #ffffff;
 }
 
-.icon-search:before {
+.icon-book-1:before {
   content: "\61";
-  color: #943c82;
+}
+.icon-star-rate:before {
+  content: "\62";
+  color: #ffcc00;
+}
+.icon-star:before {
+  content: "\62";
+  color: #dddddd;
+
 }
 .icon-user:before {
-  content: "\62";
-  color: #943c82;
-}
-.icon-menu:before {
   content: "\63";
   color: #943c82;
 }
-.icon-lightbulb-o:before {
+.icon-users:before {
   content: "\64";
 }
-.icon-wrench:before {
+.icon-rss-square:before {
   content: "\65";
 }
-.icon-home:before {
+.icon-wrench:before {
   content: "\66";
 }
-.icon-book-1:before {
+.icon-lightbulb-o:before {
   content: "\67";
 }
 .icon-briefcase:before {
   content: "\68";
 }
-.icon-users:before {
+.icon-angle-down:before {
   content: "\69";
+  color: #999999 !important;
+  font-size: 26px;
+  margin: 0;
 }
-.icon-rss-square:before {
+.icon-caret-down:before {
   content: "\6a";
+
 }
-.icon-pencil-square-o:before {
+.icon-menu:before {
   content: "\6b";
+  color: #943c82;
+}
+.icon-search:before {
+  content: "\6c";
+  color: #943c82;
+}
+.icon-home:before {
+  content: "\6d";
+}
+.icon-photo:before {
+  content: "\6e";
 }
