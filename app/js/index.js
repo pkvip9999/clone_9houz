@@ -168,3 +168,4 @@ function kc(p, c, mg) {
 
 kc(pros, pro, 20);
 kc(ideas, idea, 0)
+

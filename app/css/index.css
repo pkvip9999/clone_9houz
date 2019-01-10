@@ -1775,7 +1775,8 @@ input:focus, button:focus {
 img {
   width: 100%;
   height: 100%;
-  object-fit: cover; }
+  object-fit: cover;
+  pointer-events: none; }
 
 ul {
   padding: 0;
@@ -1838,6 +1839,8 @@ header {
     z-index: 10000; }
   #menu-top .drop-menu {
     height: 100%; }
+  #menu-top li > a {
+    text-transform: uppercase; }
 
 #slide-top {
   width: 100%;
@@ -1920,12 +1923,16 @@ header {
     #top-pros .pro .user {
       white-space: nowrap;
       text-overflow: ellipsis;
-      overflow: hidden; }
+      overflow: hidden;
+      text-transform: uppercase; }
     #top-pros .pro .avatar {
       border: 1px solid #b953a4;
       border-radius: 100%;
       margin-bottom: 25px;
-      padding: 5px; }
+      padding: 5px;
+      transition: all 0.3s; }
+      #top-pros .pro .avatar:hover {
+        padding: 0; }
       #top-pros .pro .avatar img {
         border-radius: 100%; }
     #top-pros .pro button {
@@ -2036,7 +2043,8 @@ header {
 
 .title-2 {
   font-size: 30px;
-  margin-bottom: 33px; }
+  margin-bottom: 33px;
+  text-transform: uppercase; }
   .title-2 p {
     position: relative;
     height: 60px;
@@ -2124,3 +2132,8 @@ footer {
     color: #999999; }
   footer li + li {
     margin-bottom: 5px; }
+
+#login-box {
+  width: 100%;
+  height: 100%;
+  position: fixed; }

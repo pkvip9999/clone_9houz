@@ -9,23 +9,43 @@
   display: none; }
 
 @media (min-width: 769px) {
+  .mcm {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    left: 0;
+    z-index: 10;
+    display: none;
+    top: 107px; }
+  .showmcm {
+    display: inline-block; }
   .logo {
     width: 100px;
     height: auto;
-    margin-right: 160px; }
+    margin-right: 60px; }
   .icon-menu {
     display: none; }
   .search {
-    width: 370px;
+    width: 465px;
     height: 37px;
     border: 1px solid #909090;
     border-radius: 35px;
     margin-right: auto;
     text-align: center;
-    padding: 0 17px; }
+    padding-left: 17px;
+    padding-right: 10px; }
+    .search button {
+      padding: 0; }
     .search input {
       width: 100%;
       height: 100%; }
+    .search .icon-search {
+      font-size: 20px;
+      cursor: pointer;
+      background: transparent; }
+  #filter {
+    display: none; }
   #menu-top [id*='drop-menu-child-'] {
     display: none; }
   #menu-top .main-menu {
@@ -47,21 +67,10 @@
     text-transform: capitalize; }
   #menu-top .icon-angle-down {
     display: none; }
+  .back {
+    display: none !important; }
   .drop-menu {
     position: relative; }
-    .drop-menu li {
-      overflow: hidden; }
-      .drop-menu li::after {
-        display: none;
-        content: '';
-        position: absolute;
-        height: 6px;
-        width: 100%;
-        background: #ffffff;
-        left: 0;
-        top: 100%;
-        transform: translateY(-100%);
-        z-index: 1000; }
     .drop-menu:hover {
       background: #ffffff;
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.7); }
@@ -71,6 +80,19 @@
         visibility: visible; }
       .drop-menu:hover li::after {
         display: inline-block; }
+  .drop-menu > li {
+    overflow: hidden; }
+    .drop-menu > li::after {
+      display: none;
+      content: '';
+      position: absolute;
+      height: 6px;
+      width: 100%;
+      background: #ffffff;
+      left: 0;
+      top: 100%;
+      transform: translateY(-100%);
+      z-index: 1000; }
   .list-cate {
     visibility: hidden;
     background: #ffffff;
@@ -79,27 +101,56 @@
     left: 0;
     z-index: 100;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    width: 200%; }
+    width: 400px;
+    padding: 0 0 10px 0; }
     .list-cate ul {
       flex-direction: column;
       align-items: start !important; }
     .list-cate li {
-      padding: 0 !important; }
+      width: 100%;
+      padding: 0 20px !important;
+      position: relative; }
+      .list-cate li:after {
+        visibility: hidden;
+        content: '';
+        width: 3px;
+        height: 100%;
+        background: #b953a4;
+        position: absolute;
+        right: 0px; }
+      .list-cate li:hover:after {
+        visibility: visible; }
+      .list-cate li:hover > [class*='child-'] {
+        display: inline-block; }
+  [class*='child-'] {
+    background: #ffffff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%; }
   .f-1 {
     width: 50%;
     padding-right: 160px; } }
 
+.display {
+  display: none; }
+
 @media (max-width: 768px) {
   body {
     padding: 0 10px; }
+  .logo {
+    order: 3;
+    margin: 0 auto; }
   .search {
     transition: all 0.5s;
-    width: 0; }
+    width: 0;
+    order: 2; }
     .search input {
       display: none; }
     .search .icon-search {
-      font-size: 30px;
+      font-size: 25px;
       display: flex;
       align-items: center; }
   .container {
@@ -121,8 +172,12 @@
       background: #fff;
       height: 100%;
       display: inline-block; }
-  .display {
-    display: none; }
+  .icon-user {
+    font-size: 20px;
+    padding: 0 8px; }
+  .icon-filter {
+    margin-left: 0 !important;
+    padding: 0 8px; }
   .show {
     display: block;
     max-height: 9999px;
@@ -136,11 +191,13 @@
     background: #ffffff;
     position: absolute;
     height: 100%;
-    width: 70%;
+    width: 80%;
     top: 0;
     right: 100%; }
     #menu-top [class*='icon-']::before, #menu-top a {
       color: #666666 !important; }
+    #menu-top [class*='child-'] {
+      display: none; }
     #menu-top a {
       margin-right: auto;
       display: flex;
@@ -166,9 +223,10 @@
       padding: 20px 0 !important;
       font-size: 15px !important; }
   .icon-menu {
-    font-size: 30px;
+    font-size: 25px;
     display: flex;
-    align-items: center; }
+    align-items: center;
+    order: 1; }
   .home {
     font-size: 30px !important;
     text-align: center;

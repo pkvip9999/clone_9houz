@@ -1,6 +1,9 @@
 @import "mixin";
 
 
+
+
+
 #main-da {
   background: #f4f6f9;
   padding: 20px 0 0 0;
@@ -60,7 +63,10 @@
 
 
 .main-content {
-  @extend .slidebar;
+  padding: 20px;
+  border: 1px solid #eee;
+  background: #ffffff;
+  color: #333333;
   h1 {
     font-size: 25px;
   }
@@ -145,9 +151,109 @@
   font-size: 1rem;
 }
 
+
+
+// style filter
+#filter{
+  background: #ffffff;
+  position: absolute;
+  height: 100%;
+  width: 80%;
+  top: 0;
+  left: 100%;
+  z-index: 111111;
+  overflow: auto;
+}
+.filter-drawer{
+  padding: 15px 10px 0 15px;
+  border-bottom: 1px solid #eeeeee;
+  h3{
+    font-size: 15px;
+    text-transform: uppercase;
+  }
+}
+.filter-drawer-content{
+  margin-left: -0.25rem;
+}
+.filter-drawer-item{
+  font-size: 15px;
+  width: 50%;
+  padding: 0.25rem;
+}
+.filter-drawer-item-inner{
+  border-radius: 0.25rem;
+  cursor: pointer;
+  height: 2.25rem;
+  line-height: 1.75rem;
+  padding: 0.25rem 0.5rem;
+  background: #f5f5f5;
+  border: 2px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  p{
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+  }
+}
+.filter-drawer-content-foldable{
+  margin-left: -0.25rem;
+}
+.filter-drawer-toggle{
+  cursor: pointer;
+  padding: 0.7rem 0;
+  text-align: center;
+}
+.filter-drawer-open{
+  transition: height 0.3s;
+  opacity: 1;
+  overflow: hidden;
+}
+.filter-drawer-closed{
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.filter-drawer-item-checked{
+  border: 2px #dc3545 solid;
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    border-color: #ffffff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: -1px;
+    right: 2px;
+    transform: rotate(45deg);
+    height: 10px;
+    width: 5px;z-index: 2;
+  }
+  &:after{
+    content: '';
+    border-bottom-left-radius: 0.1rem;
+    position: absolute;
+    top: 0;
+    right: -1px;
+    height: 12px;
+    width: 12px;
+    background: #dc3545;
+    z-index: 1;
+  }
+}
 @media (max-width: 768px) {
+
+
+
+
+  // ----------------------------------  //
   .slidebar{
     margin-bottom: 10px;
+    display: none;
   }
   .media {
     flex-direction: column;
@@ -157,8 +263,16 @@
     height: auto !important;
     margin-bottom: 20px;
   }
+  .icon-filter{
+    margin-left: 20px;
+    background: transparent;
+  }
 }
-
+@media (min-width: 769px){
+  .icon-filter{
+    display: none !important;
+  }
+}
 
 
 $hoverDuration: 170ms;
@@ -259,7 +373,6 @@ $borderColor: rgba (185,83,164,0.1);
       color: rgba(0, 0, 0, 1);
     }
   }
-
   .prev,
   .next {
     font-size: 14px;

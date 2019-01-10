@@ -1,10 +1,9 @@
-
 var iconMenu = document.getElementsByClassName('icon-menu')[0];
 var l = true;
 iconMenu.onclick = function () {
     if (l) {
         document.body.style.transition = 'all 0.3s';
-        document.body.style.transform = ' translateX(70%)';
+        document.body.style.transform = ' translateX(80%)';
         document.body.style.overflowY = ' hidden';
         mc.style.display = 'block'
         l = false
@@ -58,14 +57,12 @@ window.onresize = function () {
 }
 var dropdown = document.querySelectorAll('.drop-menu');
 var dropdownArray = Array.prototype.slice.call(dropdown,0);
-var tabslidebar =document.querySelectorAll('.tab-slidebar')
-var tabList = Array.prototype.slice.call(tabslidebar,0)
+var mcm = document.getElementsByClassName('mcm')[0]
 function drop(a){
     a.forEach(function(el){
         var button = el.querySelector('span'),
             menu = el.querySelector('.list')
         // arrow = button.querySelector('i.icon-arrow');
-        console.log(button)
         button.onclick = function(event) {
             if(!menu.hasClass('show')) {
                 menu.classList.add('show');
@@ -82,10 +79,17 @@ function drop(a){
                 event.preventDefault();
             }
         };
+
+        el.onmousemove = function () {
+            mcm.style.display = 'block'
+        }
+        el.onmouseout = function () {
+            mcm.style.removeProperty('display')
+        }
     })
 }
 drop(dropdownArray)
-drop(tabList)
+
 Element.prototype.hasClass = function(className) {
     return this.className && new RegExp("(^|\\s)" + className + "(\\s|$)").test(this.className);
 };
@@ -118,5 +122,7 @@ function back(n) {
     elm.style.transform = 'translateX(-100%)'
     t = n
 }
-
-
+var user = document.getElementsByClassName('icon-user')[0]
+if (window.innerWidth < 768) {
+    user.innerHTML = ''
+}
