@@ -30,7 +30,87 @@
     </div>
 </header>
 <section id="login-box">
-
+    <div class="modal-authen d-flex align-items-center">
+        <div class="modal-authen-content">
+            <div class="modal-tabs-wrapper d-flex">
+                    <div class="modal-tabs-wrapper-item modal-border">
+                    Sign in
+                </div>
+                <div class="modal-tabs-wrapper-item">
+                    Sign up
+                </div>
+            </div>
+            <div class="form">
+                <div class="sign-in-form">
+                    <div class="social d-flex  flex-column">
+                        <div class="social-item">
+                            <a href="#" class="with-fb d-flex"><span class="icon-facebook-official d-flex align-items-center justify-content-center"></span><span class="d-flex align-items-center">Đăng nhập bằng Facebook</span></a>
+                        </div>
+                        <div class="social-item">
+                            <a href="#" class="with-google d-flex "><span class="icon-google-plus-square d-flex align-items-center justify-content-center"></span><span class="d-flex align-items-center">Đăng nhập bằng Google</span></a>
+                        </div>
+                    </div>
+                    <div class="horizon d-flex justify-content-center">
+                        <span class="d-flex align-items-center">OR</span>
+                    </div>
+                    <div class="modal-form">
+                        <form action="">
+                            <div class="modal-input-container d-flex flex-column">
+                                <label for="input-1">Email</label><input type="text" id="input-1" name="email"  >
+                                <div></div>
+                            </div>
+                            <div class="modal-input-container d-flex flex-column">
+                                <label for="input-2">Password</label>
+                                <input type="password" id="input-2" name="pass">
+                            </div>
+                            <div class="d-flex">
+                                <button type="submit">Đăng nhập</button>
+                            </div>
+                            <div class="forget-pass">
+                                <a href="#">Quên mật khẩu ?</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="sign-up-form" style="display:none;">
+                    <div class="social d-flex  flex-column">
+                        <div class="social-item">
+                            <a href="#" class="with-fb d-flex"><span class="icon-facebook-official d-flex align-items-center justify-content-center"></span><span class="d-flex align-items-center">Đăng ký bằng Facebook</span></a>
+                        </div>
+                        <div class="social-item">
+                            <a href="#" class="with-google d-flex "><span class="icon-google-plus-square d-flex align-items-center justify-content-center"></span><span class="d-flex align-items-center">Đăng ký bằng Google</span></a>
+                        </div>
+                    </div>
+                    <div class="horizon d-flex justify-content-center">
+                        <span class="d-flex align-items-center">OR</span>
+                    </div>
+                    <div class="modal-form">
+                        <form action="">
+                            <div class="modal-input-container d-flex flex-column">
+                                <label for="input-3">Họ và tên</label><input type="text" id="input-3" name="name">
+                                <div></div>
+                            </div>
+                            <div class="modal-input-container d-flex flex-column">
+                                <label for="input-4">Email</label>
+                                <input type="text" id="input-4" name="email">
+                            </div>
+                            <div class="modal-input-container d-flex flex-column">
+                                <label for="input-5">Mật khẩu</label>
+                                <input type="password" id="input-5" name="pass">
+                            </div>
+                            <div class="modal-input-container d-flex flex-column">
+                                <label for="input-6">Xác nhận lại mật khẩu</label>
+                                <input type="password" id="input-6" name="pass-confirm">
+                            </div>
+                            <div class="d-flex">
+                                <button type="submit">Đăng ký</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 <section id="menu-top">
     <div class="container">
@@ -40,16 +120,16 @@
                     <a class="" href=""><img src="imgs/logo.png" alt=""></a>
                 </li>
                 <div class="main-menu">
-                    <div class="drop-menu" >
+                    <div class="drop-menu">
                         <li>
                             <a class="icon-lightbulb-o" href="#">Ý Tưởng</a>
                             <span class="icon-angle-down" data-toggle="dropdown"></span>
                         </li>
-                        <div class="list-cate list show" >
+                        <div class="list-cate list show">
                             <ul class="list-unstyled">
                                 <li>
                                     <a href="#"> Thiết kế nội thất nhà biệt thự </a>
-                                     <span class="icon-angle-down r270" onclick="dmenuChild(1)"></span>
+                                    <span class="icon-angle-down r270" onclick="dmenuChild(1)"></span>
                                     <div class="child-1">
                                         <ul>
                                             <li>
@@ -60,7 +140,8 @@
                                                 <div class="child-1b">
                                                     <ul>
                                                         <li>
-                                                            <a href="#">mẫu thiết kế nội thất biệt thự siêu sang trọng</a>
+                                                            <a href="#">mẫu thiết kế nội thất biệt thự siêu sang
+                                                                trọng</a>
                                                         </li>
                                                         <li>
                                                             <a href="#">menu</a>
@@ -110,7 +191,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="drop-menu" >
+                    <div class="drop-menu">
                         <li>
                             <a class="icon-book-1" href="#">Sản Phẩm</a>
                             <span class="icon-angle-down"></span>
