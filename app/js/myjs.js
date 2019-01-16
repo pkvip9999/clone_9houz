@@ -197,7 +197,7 @@ modalInputArray.forEach(function (el) {
         el.classList.add('modal-input-focus')
     }
     input.onblur = function () {
-        if (input.value === '') {
+        if (input.value === '') {   
             el.classList.remove('modal-input-focus')
         }
     }

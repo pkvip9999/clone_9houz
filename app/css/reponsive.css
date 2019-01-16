@@ -109,7 +109,8 @@
     .list-cate li {
       width: 100%;
       padding: 0 20px !important;
-      position: relative; }
+      position: relative;
+      height: 30px !important; }
       .list-cate li:after {
         visibility: hidden;
         content: '';
@@ -122,6 +123,10 @@
         visibility: visible; }
       .list-cate li:hover > [class*='child-'] {
         display: inline-block; }
+    .list-cate a {
+      text-transform: none !important; }
+      .list-cate a:hover {
+        color: #b953a4 !important; }
   [class*='child-'] {
     background: #ffffff;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);

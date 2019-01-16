@@ -114,7 +114,8 @@
 
 .filter-drawer-container {
   position: absolute;
-  top: 0; }
+  top: 0;
+  padding-bottom: 50px; }
 
 .filter-drawer {
   padding: 15px 10px 0 15px;

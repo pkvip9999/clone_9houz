@@ -96,8 +96,6 @@
   }
   .drop-menu {
     position: relative;
-
-
     &:hover {
       background: #ffffff;
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
@@ -147,6 +145,7 @@
       width: 100%;
       padding: 0 20px !important;
       position: relative;
+      height: 30px !important;
       &:after{
         visibility: hidden;
         content: '';
@@ -163,6 +162,12 @@
         &>[class*='child-']{
           display: inline-block;
         }
+      }
+    }
+    a{
+      text-transform: none !important;
+      &:hover{
+        color: #b953a4 !important;
       }
     }
   }
