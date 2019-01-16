@@ -41,13 +41,14 @@ itemsArray.forEach(function (el) {
 })
 var filter = document.getElementById('filter')
 filter.style.height = window.innerHeight + 'px';
+
 window.onresize = function () {
     filter.style.height = window.innerHeight + 'px';
 }
 var iconFilter = document.getElementsByClassName('icon-filter')[0]
 iconFilter.onclick = function () {
-    document.body.style.transition = 'all 0.3s';
-    document.body.style.transform = ' translateX(-80%)';
+    filter.style.display = 'block'
+    filter.style.right = '0';
     document.body.style.overflowY = ' hidden';
     mc.style.display = 'block'
 }

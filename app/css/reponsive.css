@@ -44,8 +44,6 @@
       font-size: 20px;
       cursor: pointer;
       background: transparent; }
-  #filter {
-    display: none; }
   #menu-top [id*='drop-menu-child-'] {
     display: none; }
   #menu-top .main-menu {
@@ -261,6 +259,12 @@
       font-size: 20px !important; }
       [id*='drop-menu-child-'] .back a {
         color: #333333 !important; }
+  #main {
+    overflow-x: hidden; }
+  #slide-bot {
+    overflow-x: hidden; }
+  #main-da {
+    overflow: hidden; }
   footer .container {
     flex-direction: column; }
   footer .f-2 {

@@ -51,9 +51,6 @@
       background: transparent;
     }
   }
-  #filter{
-    display: none;
-  }
   //style menu top
   #menu-top {
     [id*='drop-menu-child-'] {
@@ -368,7 +365,13 @@
 
   //  style main
   #main {
-
+    overflow-x: hidden;
+  }
+  #slide-bot{
+    overflow-x: hidden;
+  }
+  #main-da{
+    overflow: hidden;
   }
   //  style footer
   footer {

@@ -22,7 +22,6 @@ var menu = document.getElementsByClassName('menu')[0];
 var iconSearch = document.getElementsByClassName('icon-search')[0];
 var mc = document.getElementsByClassName('mc')[0];
 var search = document.getElementsByClassName('search')[0];
-var filterFooter = document.getElementsByClassName('filter-drawer-footer')[0]
 if (window.innerWidth < 768) {
     menu.style.height = window.innerHeight + 'px';
     // filterFooter.style.height = window.innerHeight + 'px';
@@ -32,6 +31,8 @@ if (window.innerWidth < 768) {
         mc.style.display = 'block'
     }
     mc.onclick = function () {
+        var filter = document.getElementById('filter')
+        filter.style.removeProperty('right')
         search.classList.remove('search-click');
         document.body.style.removeProperty('overflow-y')
         document.body.style.removeProperty("transform");
